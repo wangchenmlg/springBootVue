@@ -10,7 +10,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production, then the file well gone to the web project
 ```
 npm run build
 ```
