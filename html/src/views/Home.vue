@@ -16,7 +16,21 @@ export default {
   },
   methods:{
     getTestRemote : function(){
-      this.$http("/contl.do",{});
+      this.$http("/contl.do",{})
+      .then(function(data){
+        console.log(data);
+      });
+
+      this.$http.get("/contl.do",{params:{type:"get", value:"中文测试-GET"}})
+      .then(res => {
+        console.log(res.data.receive);
+      });
+
+      this.$http.post("/contl.do",{type:"post", value:"中文测试-POST"})
+      .then(res => {
+        console.log(res);
+      });
+
     }
   }
 }

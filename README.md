@@ -1,5 +1,10 @@
 
 
+
+●2019-11-28（axios跨域处理）
+  将根据vue的使用环境自动切换跨域api，使用axios封装至this.$http("xxx/xxx")
+
+
 ●2019-11-27（vue搭建）
   将html工程中的dist文件全部拷贝至 springBootVue\web\src\main\resources\static 
   即可通过 http://127.0.0.1:8090/index.html 访问到编译结果
