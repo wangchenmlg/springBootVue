@@ -17,5 +17,8 @@ public class WebApplication {
         logger.info("This is an info message");
         logger.warn("This is a warn message");
         logger.error("This is an error message");
+        
+        Logger loggerOther =LoggerFactory.getLogger("otherLog");
+        loggerOther.info("这是我的独立信息输出日志");
 	}
 }
