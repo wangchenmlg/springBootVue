@@ -13,8 +13,11 @@ import net.sf.json.JSONSerializer;
 import net.sf.json.JsonConfig;
 import net.sf.json.util.JSONUtils;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class JsonUtil {
-//	private final static Logger logger = Logger.getLogger(JsonUtil.class);
+	private final static Logger logger = LoggerFactory.getLogger(JsonUtil.class);
 
 	// 当前json格式字符串格式是否良好
 	public static boolean isJSON(String jsonString) {
@@ -76,7 +79,7 @@ public class JsonUtil {
 		if (object instanceof JSONArray) {
 			return (List<Object>) JSONArray.toCollection((JSONArray) object, objectClass);
 		} else {
-//			logger.warn("The object is not a instance of JSONArray");
+			logger.warn("The object is not a instance of JSONArray");
 			return null;
 		}
 	}
